@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes
+app.get('/api/status',(req,res)=>{
+    res.json({status: "API is up and running"})
+})
 app.use('/api/auth', authRoutes);
 app.use('/api/schools', schoolRoutes);
 
